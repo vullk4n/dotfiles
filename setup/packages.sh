@@ -62,7 +62,7 @@ readonly AUR=(
   papirus-icon-theme-git
 
   # apps
-  google-chrome-beta
+  google-chrome
   oh-my-zsh-git
   swaylock-effects-git
   translate-shell-git
