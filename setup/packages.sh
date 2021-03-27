@@ -10,8 +10,8 @@ readonly PACKAGES=(
   archlinux-keyring
 
   # apps
-  alacritty tailscale filezilla git gpicview htop
-  lxappearance leafpad vscode mako
+  alacritty bat tailscale filezilla git gpicview htop
+  lxappearance dhcpcd leafpad vscode mako
   nano nano-syntax-highlighting
   reflector brightnessctl
   stow sway swaybg

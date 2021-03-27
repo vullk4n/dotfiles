@@ -72,19 +72,20 @@
     "interval": 30,
     "format": "{icon} {percent}%",
     "format-icons": [""],
-    "on-scroll-down": "echo $((`cat /sys/class/backlight/amdgpu_bl0/brightness` - 5)) | sudo tee /sys/class/backlight/amdgpu_bl0/brightness",
-    "on-scroll-up": "echo $((`cat /sys/class/backlight/amdgpu_bl0/brightness` + 5)) | sudo tee /sys/class/backlight/amdgpu_bl0/brightness"
+    "on-scroll-down": "echo $((`cat /sys/class/backlight/intel_backlight/brightness` - 5)) | sudo tee /sys/class/backlight/intel_backlight/brightness",
+    "on-scroll-up": "echo $((`cat /sys/class/backlight/intel_backlight/brightness` + 5)) | sudo tee /sys/class/backlight/intel_backlight/brightness"
   },
-  "battery": {
-    "bat": "BAT1",
+    "battery": {
+    "bat": "BAT0",
     "interval": 30,
     "states": {
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon} {capacity}%",
+    "format": "<span color=\"#F2F2F2\">{capacity}%</span> {icon}",
+    "format-charging": "<span color=\"#F2F2F2\">{capacity}%</span> <span color=\"#50fa7b\"></span>",
     "format-icons": ["", "", "", "", ""],
-    "max-length": 25
+    "format-full": "{capacity}% ",
   },
   "network": {
     "interface": "wlan0", // (Optional) To force the use of this interface
@@ -120,7 +121,7 @@
   },
 "custom/whatsapp": {
     "format": "",
-    "on-click": "xdg-open https://web.whatsapp.com/",
+    "on-click": "xdg-open https://meet.google.com/landing?hs=197&authuser=0",
     "tooltip": false
   },
   "custom/gerrit": {
@@ -130,7 +131,7 @@
   },
   "custom/keep": {
     "format": "",
-    "on-click": "xdg-open https://keep.google.com/",
+    "on-click": "xdg-open https://docs.google.com/document/u/0/",
     "tooltip": false
   },
   "custom/bluetooth": {

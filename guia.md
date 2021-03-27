@@ -215,10 +215,11 @@ CTRL + d
 nmtui
 ```
 
-### AMD (NOVA):
+### Grafic
 
 ```
 sudo pacman -S xf86-video-amdgpu --noconfirm
+sudo pacman -S xf86-video-intel --noconfirm
 ```
 
 ### Baixar alguns pacotes:
