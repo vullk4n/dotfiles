@@ -16,7 +16,6 @@ readonly PACKAGES=(
   filezilla
   git gpicview
   htop
-  lxappearance
   mako
   nano nano-syntax-highlighting
   reflector
