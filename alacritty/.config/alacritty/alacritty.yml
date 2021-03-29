@@ -17,18 +17,20 @@ window:
 
 font:
   normal:
-    family: Terminus
+    family: monospace
     style: Regular
   bold:
-    family: Terminus
+    family: monospace
     style: Bold
   italic:
-    family: Terminus
+    family: monospace
     style: Italic
   bold_italic:
-    family: Terminus
+    family: monospace
     style: Bold Italic
-  size: 7
+  size: 9.0
+
+background_opacity: 0.7
 
 mouse:
   double_click: { threshold: 300 }
