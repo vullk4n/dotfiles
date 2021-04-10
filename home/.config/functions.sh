@@ -77,9 +77,10 @@ ssh vitor@177.180.12.157
 }
 
 function job () {
-mkdir GitHub
-cd GitHub
-git clone https://github.com/vulkan-ops/myarch myarch
+cd Downloads
+mkdir github
+cd github
+git clone https://github.com/vulkan-ops/arch archlinux
 git clone https://github.com/AOSPK-Devices/device_motorola_ocean ocean-dt
 git clone https://github.com/AOSPK-Devices/device_motorola_sdm632-common common-tree
 git clone https://gitlab.com/AOSPK-Devices/vendor_motorola_ocean vendor-ocean
