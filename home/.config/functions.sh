@@ -73,7 +73,7 @@ function fetch() {
 }
 
 function vm () {
-ssh vitor@179.211.213.25
+ssh vitor@casa.luizdores.com.br
 }
 
 function job () {
