@@ -4,7 +4,7 @@ env:
   TERM: alacritty
 
 import:
-  - /home/vitor/.config/alacritty/colors.yml
+  - /home/vulkan/.config/alacritty/colors.yml
 
 scrolling:
   history: 10000
