@@ -1,0 +1,44 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+env:
+  TERM: alacritty
+
+import:
+  - /home/vitor/.config/alacritty/colors.yml
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+window:
+  padding:
+    x: 5
+    y: 5
+
+font:
+  normal:
+    family: Terminus
+    style: Regular
+  bold:
+    family: Terminus
+    style: Bold
+  italic:
+    family: Terminus
+    style: Italic
+  bold_italic:
+    family: Terminus
+    style: Bold Italic
+
+background_opacity: 0.7
+
+mouse:
+  double_click: { threshold: 300 }
+  url:
+    launcher:
+      program: xdg-open
+
+debug:
+  render_timer: false
+  persistent_logging: false
+  log_level: Warn
+  print_events: true
