@@ -1,5 +1,5 @@
 [ -z "$PS1" ] && return
-export OUT_DIR=/mnt/hd3/vitor/out
+#export OUT_DIR=/mnt/hd3/vitor/out
 HISTCONTROL=ignoreboth
 shopt -s histappend
 
@@ -66,15 +66,6 @@ alias google='ping -t 3 www.google.com.br'
 alias uol='ping -t 3 www.uol.com.br'
 export HISTTIMEFORMAT="%d/%m/%y %T "
 
-
-function dt () {
-git clone https://github.com/vulkan-ops/device_motorola_ocean -b statixOS device/motorola/ocean
-git clone https://github.com/vulkan-ops/device_motorola_sdm632-common -b statixOS device/motorola/sdm632-common
-git clone https://gitlab.com/vulkan-ops/vendor_motorola_ocean  vendor/motorola/ocean
-git clone https://gitlab.com/vulkan-ops/vendor_motorola_sdm632-common  vendor/motorola/sdm632-common
-git clone https://github.com/vulkan-ops/kernel_motorola_sdm632  kernel/motorola/sdm632
-}
-
 function f() {
   git fetch https://github.com/${1} ${2}
 }
@@ -91,14 +82,6 @@ function a() {
   git cherry-pick --abort
 }
 
-function c() {
-    git add . && git commit --author "${1}" && git push -f
-  }
     function amend() {
     git add . && git commit --amend
   }
-
-function b () {
-. build/envsetup.sh
-brunch statix_${1}-userdebug | tee ${1}.log
-}
