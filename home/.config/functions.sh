@@ -76,6 +76,12 @@ function vm () {
 ssh vitor@casa.luizdores.com.br
 }
 
+function dt () {
+git clone https://github.com/PixelExperience/hardware_qcom-caf_msm8996_display hardware/qcom-caf/msm8996/display
+git clone https://github.com/PixelExperience/hardware_qcom-caf_msm8996_media hardware/qcom-caf/msm8996/media
+git clone https://github.com/PixelExperience/hardware_qcom-caf_msm8996_audio hardware/qcom-caf/msm8996/audio
+}
+
 function job () {
 cd Downloads
 mkdir github
@@ -92,13 +98,19 @@ git clone https://github.com/vulkan-ops/vendor_motorola_sdm632-common vendor-com
 git clone https://github.com/vulkan-ops/kernel_motorola_sdm632 kernel
 }
 
-function v () {
-export CCACHE_EXEC=$(which ccache)
-export USE_CCACHE=1
-export CCACHE_DIR=$HOME/.ccache
-ccache -M 50G
+function b () {
 . build/envsetup.sh
-lunch aosp_${1}-userdebug
-make bacon -j$(nproc --all) | tee ${1}.log
+#make installclean
+#export ARROW_GAPPS=true
+lunch lineage_${1}-userdebug
+#export TEMPORARY_DISABLE_PATH_RESTRICTIONS=true
+#export SKIP_ABI_CHECKS=true
+make  bacon -j$(nproc --all) | tee ${1}.log
 }
 
+function v () {
+source build/envsetup.sh
+#export MIN_GAPPS=true
+lunch derp_${1}-userdebug
+mka derp -j$(nproc --all) | tee ${1}.log
+}
