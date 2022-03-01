@@ -77,6 +77,7 @@ ssh vitor@casa.luizdores.com.br
 }
 
 function dt () {
+git clone https://github.com/PixelExperience/system_qcom  vendor/qcom/opensource/softap/softap
 git clone https://github.com/PixelExperience/hardware_qcom-caf_msm8996_display hardware/qcom-caf/msm8996/display
 git clone https://github.com/PixelExperience/hardware_qcom-caf_msm8996_media hardware/qcom-caf/msm8996/media
 git clone https://github.com/PixelExperience/hardware_qcom-caf_msm8996_audio hardware/qcom-caf/msm8996/audio
