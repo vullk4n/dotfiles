@@ -82,6 +82,18 @@ git clone https://github.com/PixelExperience/hardware_qcom-caf_msm8996_media har
 git clone https://github.com/PixelExperience/hardware_qcom-caf_msm8996_audio hardware/qcom-caf/msm8996/audio
 }
 
+function derp () {
+#git clone https://github.com/vulkan-ops/device_motorola_channel -b derp  device/motorola/channel
+git clone https://github.com/vulkan-ops/device_motorola_ocean  -b derp  device/motorola/ocean
+#git clone https://github.com/vulkan-ops/device_motorola_river  -b derp  device/motorola/river
+git clone https://github.com/vulkan-ops/device_motorola_sdm632-common   device/motorola/sdm632-common
+git clone https://github.com/vulkan-ops/vendor_motorola_ocean   vendor/motorola/ocean
+#git clone https://github.com/vulkan-ops/vendor_motorola_channel   vendor/motorola/channel
+#git clone https://github.com/vulkan-ops/vendor_motorola_river   vendor/motorola/river
+git clone https://github.com/vulkan-ops/vendor_motorola_sdm632-common  vendor/motorola/sdm632-common
+git clone https://github.com/vulkan-ops/kernel_motorola_sdm632   kernel/motorola/sdm632
+}
+
 function job () {
 cd Downloads
 mkdir github
