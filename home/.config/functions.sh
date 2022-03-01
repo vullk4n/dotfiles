@@ -113,16 +113,17 @@ git clone https://github.com/vulkan-ops/kernel_motorola_sdm632 kernel
 function b () {
 . build/envsetup.sh
 #make installclean
-#export ARROW_GAPPS=true
-lunch lineage_${1}-userdebug
 #export TEMPORARY_DISABLE_PATH_RESTRICTIONS=true
 #export SKIP_ABI_CHECKS=true
+lunch lineage_${1}-userdebug
 make  bacon -j$(nproc --all) | tee ${1}.log
 }
 
 function v () {
-source build/envsetup.sh
-#export MIN_GAPPS=true
-lunch derp_${1}-userdebug
+. build/envsetup.sh
+#make installclean
+#export TEMPORARY_DISABLE_PATH_RESTRICTIONS=true
+#export SKIP_ABI_CHECKS=true
+lunch derp_${1}-eng
 mka derp -j$(nproc --all) | tee ${1}.log
 }
