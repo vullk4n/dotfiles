@@ -25,7 +25,7 @@ function translate() {
   cat $typing
 }
 
-if [ $HOST = "vulkan" ]; then
+if [ $HOST = "vitor" ]; then
   function cm() {
     translate
     git add . && git commit --message $msg --signoff --author "vulkan-ops <vulkanops@gmail.com>" && git push -f
@@ -77,7 +77,7 @@ ssh vitor@casa.luizdores.com.br
 }
 
 function dt () {
-git clone https://github.com/PixelExperience/system_qcom  vendor/qcom/opensource/softap/softap
+git clone https://github.com/PixelExperience/system_qcom  system/qcom
 git clone https://github.com/PixelExperience/hardware_qcom-caf_msm8996_display hardware/qcom-caf/msm8996/display
 git clone https://github.com/PixelExperience/hardware_qcom-caf_msm8996_media hardware/qcom-caf/msm8996/media
 git clone https://github.com/PixelExperience/hardware_qcom-caf_msm8996_audio hardware/qcom-caf/msm8996/audio
