@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ $USER = "vulkan" ]]; then
+if [[ $USER = "vitor" ]]; then
   pwd=$(pwd) && cd $HOME
   git config --global user.email "vulkanops@gmail.com"
   git config --global user.name "vulkan-ops"

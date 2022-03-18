@@ -43,7 +43,7 @@
     "max-length": 30
   },
   "clock": {
-    "timezone": "America/Sao_Paulo",
+    "timezone": "America/Fortaleza",
     "format": "{:%H:%M}",
     "format-alt": "{:%d-%m-%Y}",
     "tooltip-format": "<big>{:%B %Y}</big>\n<tt><big>{calendar}</big></tt>",
