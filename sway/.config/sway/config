@@ -114,7 +114,6 @@ exec_always import-gsettings \
     cursor-theme:gtk-cursor-theme-name \
     font-name:gtk-font-name
 
-# Shortcuts
 # Start Rofi menu
 bindsym $super+d exec --no-startup-id wofi -I -p " Apps"
 
@@ -122,26 +121,26 @@ bindsym $super+d exec --no-startup-id wofi -I -p " Apps"
 bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false; pactl set-sink-volume @DEFAULT_SINK@ +1%"
 bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false; pactl set-sink-volume @DEFAULT_SINK@ -1%"
 bindsym XF86AudioMute exec --no-startup-id "pactl set-sink-mute 0 toggle"
-
 bindsym XF86MonBrightnessDown exec (brightnessctl set 1%-)
 bindsym XF86MonBrightnessUp exec (brightnessctl set +1%)
 
-# Screenshot
+# Screenshot/Screencast
 bindsym Print exec --no-startup-id $HOME/.config/scripts/screenshot.sh window
 bindsym $control+Print exec --no-startup-id $HOME/.config/scripts/screenshot.sh
-
-# Screencast
 bindsym $control+$shift+k exec --no-startup-id $HOME/.config/scripts/screencast.sh
 
-# Application shortcuts
+# shortcuts
 bindsym $super+Return exec --no-startup-id alacritty &; workspace $ws1
 bindsym $super+e exec --no-startup-id thunar &; workspace $ws7
 bindsym $super+F3 exec --no-startup-id telegram-desktop &; workspace $ws4
 bindsym $super+F2 exec --no-startup-id google-chrome-beta --enable-features=UseOzonePlatform --ozone-platform=wayland &; workspace $ws2
-
-# System shortcuts
 bindsym F10 exec --no-startup-id $HOME/.config/scripts/commiter.sh &
 bindsym F11 exec --no-startup-id $HOME/.dotfiles/install.sh
+
+#MPV/Spotify/Qbittorent
+bindsym $super+m exec --no-startup-id mpv &; workspace $ws5
+bindsym $super+s exec --no-startup-id spotify &; workspace $ws5
+bindsym $super+F1 exec --no-startup-id qbittorrent &; workspace $ws5
 
 # Rules
 include $HOME/.config/sway/rules.conf
