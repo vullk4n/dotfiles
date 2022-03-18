@@ -138,7 +138,7 @@ bindsym F10 exec --no-startup-id $HOME/.config/scripts/commiter.sh &
 bindsym F11 exec --no-startup-id $HOME/.dotfiles/install.sh
 
 #MPV/Spotify/Qbittorent
-bindsym $super+m exec --no-startup-id mpv &; workspace $ws5
+bindsym $super+m exec  mpv &, workspace $ws5
 bindsym $super+s exec --no-startup-id spotify &; workspace $ws5
 bindsym $super+F1 exec --no-startup-id qbittorrent &; workspace $ws5
 
