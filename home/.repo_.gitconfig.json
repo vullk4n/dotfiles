@@ -1,0 +1,14 @@
+{
+  "user.name": [
+    "vulkan-ops"
+  ],
+  "user.email": [
+    "vulkanops@gmail.com"
+  ],
+  "color.ui": [
+    "auto"
+  ],
+  "credential.helper": [
+    "cache --timeout=3600"
+  ]
+}

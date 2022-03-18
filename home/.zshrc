@@ -4,9 +4,7 @@ ZSH="/usr/share/oh-my-zsh/"
 ZSH_THEME="robbyrussell"
 ZSH_DISABLE_COMPFIX=true
 HIST_STAMPS="dd/mm/yyyy"
-plugins=(sudo
-git
-)
+plugins=(sudo git)
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
