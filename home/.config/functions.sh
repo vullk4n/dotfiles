@@ -60,13 +60,13 @@ function sshgen() {
   xdg-open https://github.com/settings/ssh/new
 }
 
-function wifi() {
-  interface=$(cat /proc/net/wireless | perl -ne '/(\w+):/ && print $1')
-  iwctl station $interface scan && sleep 3
-  iwctl station $interface get-networks
-  echo "${BLU}Which network do you want to connect to?${END} "; read wifi
-  iwctl station $interface connect "${wifi}"
-}
+#function wifi() {
+#  interface=$(cat /proc/net/wireless | perl -ne '/(\w+):/ && print $1')
+#  iwctl station $interface scan && sleep 3
+#  iwctl station $interface get-networks
+#  echo "${BLU}Which network do you want to connect to?${END} "; read wifi
+#  iwctl station $interface connect "${wifi}"
+#}
 
 function fetch() {
   ./.dotfiles/home/.config/scripts/fetch.sh gnu

@@ -22,18 +22,17 @@ readonly PACKAGES=(
   reflector
   stow sway swaybg
   telegram-desktop tree thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman transmission-gtk
-  waybar wayland wofi
+  waybar wayland wofi qbittorent
   xorg-server-xwayland
   zsh-autosuggestions
-  zsh-syntax-highlighting
 
   # bluetooth
   bluez bluez-libs bluez-tools bluez-utils
 
   # tools for android/mobile
   android-tools
-  gvfs gvfs-mtp
-  ntfs-3g
+  gvfs gvfs-afc gvfs-gphoto2 gvfs-mtp gvfs-smb
+  gvfs-nfs  gvfs-goa  gvfs-google ntfs-3g
 
   # screenshots/cast
   grim
@@ -68,8 +67,9 @@ readonly AUR=(
   swaylock-effects-git
   translate-shell-git
   zsh-syntax-highlighting
+  spotify
 
-  # dependencies
+ # dependencies
   python-ruamel-yaml
   selinux-python
   ttf-font-awesome ttf-dejavu
