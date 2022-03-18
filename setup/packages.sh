@@ -48,6 +48,8 @@ readonly PACKAGES=(
   sbc
   unrar unzip
   wget
+  xf86-video-amdgpu
+  xf86-video-ati
 
   # fonts
   noto-fonts-emoji
