@@ -73,7 +73,9 @@ function fetch() {
 }
 
 function vm () {
-ssh vitor@casa.luizdores.com.br
+sudo systemctl enable --now tailscaled
+sudo tailscale up
+ssh vitor@100.110.145.82
 }
 
 function dt () {
