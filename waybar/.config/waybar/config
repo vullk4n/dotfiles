@@ -8,14 +8,11 @@
     "custom/github",
     "custom/whatsapp",
     "custom/gerrit",
-    "custom/youtube",
-    "custom/mail",
     "custom/keep",
     "custom/bluetooth",
     "sway/workspaces",
-    "sway/mode",
-    "custom/spotify"
-  ],
+    "sway/mode"
+],
   "modules-center": ["sway/window"],
   "modules-right": [
     "pulseaudio",
@@ -116,13 +113,7 @@
       "default": ["", "", ""]
     },
   },
-  "custom/spotify": {
-    "format": " {}",
-    "max-length": 40,
-    "exec": "$HOME/.config/scripts/spotify.sh",
-    "exec-if": "pgrep spotify"
-  },
-  "custom/github": {
+    "custom/github": {
     "format": "",
     "on-click": "xdg-open https://github.com",
     "tooltip": false
@@ -134,7 +125,7 @@
   },
   "custom/gerrit": {
     "format": "",
-    "on-click": "xdg-open https://review.lineageos.org/q/status:merged+branch:lineage-18.1",
+    "on-click": "xdg-open https://review.lineageos.org/q/status:merged+branch:lineage-19.0",
     "tooltip": false
   },
   "custom/keep": {
