@@ -125,7 +125,7 @@
   },
   "custom/gerrit": {
     "format": "",
-    "on-click": "xdg-open https://review.lineageos.org/q/status:merged+branch:lineage-19.0",
+    "on-click": "xdg-open https://review.lineageos.org/q/status:merged+branch:lineage-19.1",
     "tooltip": false
   },
   "custom/keep": {
