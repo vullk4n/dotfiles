@@ -64,7 +64,7 @@ cc() {
   git add . && git cherry-pick --continue
 }
 
-function a() {
+a() {
   git cherry-pick --abort
 }
 
