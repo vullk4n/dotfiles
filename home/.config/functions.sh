@@ -25,7 +25,7 @@ function translate() {
   cat $typing
 }
 
-if [ $HOST = "vitor" ]; then
+if [ $HOST = "vulkan" ]; then
   cm() {
     translate
     git add . && git commit --message $msg --signoff --author "vulkan-ops <vulkanops@gmail.com>" && git push -f
@@ -68,9 +68,9 @@ sshgen() {
 #  iwctl station $interface connect "${wifi}"
 #}
 
-fetch() {
-  ./.dotfiles/home/.config/scripts/fetch.sh gnu
-}
+#fetch() {
+ # ./.dotfiles/home/.config/scripts/fetch.sh gnu
+#}
 
 vm () {
 sudo systemctl enable --now tailscaled

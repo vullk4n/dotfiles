@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ $USER = "vitor" ]]; then
+if [[ $USER = "vulkan" ]]; then
   pwd=$(pwd) && cd $HOME
   git config --global user.email "vulkanops@gmail.com"
   git config --global user.name "vulkan-ops"
@@ -30,33 +30,33 @@ for i in "${AUR[@]}"; do
 done
 
 # Atom packages
-ATOM="
-  atom-beautify
-  atom-material-syntax
-  color-picker
-  file-icons
-  flatten-json
-  ftp-remote-edit
-  highlight-selected
-  indent-sort
-  language-i3wm
-  language-swaywm
-  mamutal91-shellscript-snippets-atom
-  markdown-writer
-  pigments
-  save-workspace"
+#ATOM="
+#  atom-beautify
+#  atom-material-syntax
+#  color-picker
+#  file-icons
+#  flatten-json
+#  ftp-remote-edit
+#  highlight-selected
+#  indent-sort
+#  language-i3wm
+#  language-swaywm
+#  mamutal91-shellscript-snippets-atom
+#  markdown-writer
+#  pigments
+#  save-workspace"
 
-apm install $ATOM
+#apm install $ATOM
 
 # Enable systemd services
-for SERVICES in \
-    cronie \
-    bluetooth \
-    getty@ttyN.service
-do
-    sudo systemctl enable $SERVICES
-    sudo systemctl start $SERVICES
-done
+#for SERVICES in \
+# cronie \
+# bluetooth \
+#getty@ttyN.service
+#do
+#sudo systemctl enable $SERVICES
+# sudo systemctl start $SERVICES
+#done
 
 source $HOME/.dotfiles/setup/etc.sh
 

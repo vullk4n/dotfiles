@@ -10,12 +10,13 @@ readonly PACKAGES=(
   archlinux-keyring
 
   # apps
-  alacritty atom
-  cronie
-  firefox firefox-i18n-pt-br
+  alacritty# atom
+  #cronie
+  #firefox firefox-i18n-pt-br
   filezilla
   git gpicview
   htop
+  lxappearance
   mako
   nano nano-syntax-highlighting
   reflector
