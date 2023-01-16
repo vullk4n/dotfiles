@@ -115,7 +115,7 @@
   },
     "custom/github": {
     "format": "",
-    "on-click": "xdg-open https://github.com",
+    "on-click": "xdg-open https://github.com/LineageOS/android_device_motorola_sdm632-common/commits/lineage-20",
     "tooltip": false
   },
 "custom/whatsapp": {
@@ -125,7 +125,7 @@
   },
   "custom/gerrit": {
     "format": "",
-    "on-click": "xdg-open https://review.lineageos.org/q/status:merged+branch:lineage-19.1",
+    "on-click": "xdg-open https://review.lineageos.org/q/status:merged+branch:lineage-20",
     "tooltip": false
   },
   "custom/keep": {
