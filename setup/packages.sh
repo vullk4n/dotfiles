@@ -13,7 +13,7 @@ readonly PACKAGES=(
   alacritty tailscale filezilla git gpicview htop
   lxappearance mako
   nano nano-syntax-highlighting
-  reflector
+  reflector brightnessctl
   stow sway swaybg
   telegram-desktop tree thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman transmission-gtk
   waybar wayland wofi qbittorent
