@@ -11,7 +11,7 @@ readonly PACKAGES=(
 
   # apps
   alacritty tailscale filezilla git gpicview htop
-  lxappearance mako
+  lxappearance leafpad vscode mako
   nano nano-syntax-highlighting
   reflector brightnessctl
   stow sway swaybg
