@@ -2,7 +2,7 @@
 
 ![screenshot](https://raw.githubusercontent.com/vulkan-ops/dotfiles/master/print.png)
 
-## Some of the worthy tools that I use, develop or help maintain:
+<!--## Some of the worthy tools that I use, develop or help maintain:
 
 - [alacritty](https://github.com/alacritty/alacritty) (A cross-platform, GPU-accelerated terminal emulator)
 - [grim](https://github.com/emersion/grim) + [slurp](https://github.com/emersion/slurp) + [wl-clipboard-manager](https://github.com/maximbaz/wl-clipboard-manager) (screenshots)
@@ -13,7 +13,7 @@
 - [wl-clipboard-manager](https://github.com/maximbaz/wl-clipboard-manager) - (clipboard manager for Wayland)
 - [wl-recorder](https://github.com/ammen99/wf-recorder) (screencast)
 - [wofi](https://github.com/tsujp/wofi) (Wofi is a launcher/menu program for wlroots based wayland compositors such as sway)
-- [zsh](https://www.zsh.org) + [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) + [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) (terminal sexy <39)
+- [zsh](https://www.zsh.org) + [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) + [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) (terminal sexy <39)-->
 
 ## Usage:
 
