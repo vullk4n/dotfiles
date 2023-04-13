@@ -62,7 +62,7 @@ readonly AUR=(
   swaylock-effects-git
   translate-shell-git
   zsh-syntax-highlighting
-  spotify
+  spotify ntp
 
  # dependencies
   python-ruamel-yaml
