@@ -2,6 +2,12 @@
 
 source $HOME/.colors &>/dev/null
 
+aetc() {
+	sudo cp /home/vulkan/.dotfiles/home/capivara/etc/hosts /etc/hosts
+	sudo cp /home/vulkan/.dotfiles/home/capivara/etc/ntp.conf /etc/ntp.conf
+	sudo ntpd-q -g  && sudo hwclock --systohc
+}
+
 f() {
   git fetch https://github.com/${1} ${2}
 }
@@ -106,18 +112,18 @@ wifi() {
 vm () {
 sudo systemctl enable --now tailscaled
 sudo tailscale up
-ssh vitor@100.110.145.82
+ssh vulkan@100.117.198.106
 }
 
 job () {
 cd Downloads
 mkdir github
 cd github
-git clone https://github.com/DerpFest-Devices/device_motorola_ocean    ocean-dt
-git clone https://github.com/DerpFest-Devices/device_motorola_river    river-dt
-git clone https://github.com/DerpFest-Devices/device_motorola_sdm632-common common-tree
-git clone https://github.com/DerpFest-Devices/vendor_motorola_ocean   vendor-ocean
-git clone https://github.com/DerpFest-Devices/vendor_motorola_river   vendor-river
-git clone https://github.com/DerpFest-Devices/vendor_motorola_sdm632-common  vendor-common
-git clone https://github.com/DerpFest-Devices/kernel_motorola_sdm632   kernel
+git clone https://github.com/vulkan-ops/device_motorola_ocean    ocean-dt
+git clone https://github.com/vulkan-ops/device_motorola_river    river-dt
+git clone https://github.com/vulkan-ops/device_motorola_sdm632-common common-tree
+git clone https://github.com/vulkan-ops/vendor_motorola_ocean   vendor-ocean
+git clone https://github.com/vulkan-ops/vendor_motorola_river   vendor-river
+git clone https://github.com/vulkan-ops/vendor_motorola_sdm632-common  vendor-common
+git clone https://github.com/vulkan-ops/kernel_motorola_sdm632   kernel
 }

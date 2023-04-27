@@ -39,7 +39,7 @@ readonly PACKAGES=(
   openssh
   python-setuptools
   sbc
-  unrar unzip
+  unrar unzip zip
   wget
   xf86-video-amdgpu
   xf86-video-ati

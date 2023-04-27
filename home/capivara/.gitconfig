@@ -1,0 +1,7 @@
+[user]
+	name = vulkan-ops
+	email = vulkanops@gmail.com
+[color]
+	ui = auto
+[credential]
+	helper = cache --timeout=3600
