@@ -39,6 +39,9 @@ application/wps-office.wpso=wps-office-wps.desktop
 application/wps-office.wpt=wps-office-wps.desktop
 x-scheme-handler/mailto=google-chrome-stable.desktop
 x-scheme-handler/tg=userapp-Telegram Desktop-073C00.desktop
+application/x-zerosize=google-chrome.desktop
+application/x-raw-disk-image=leafpad.desktop
+application/x-trash=leafpad.desktop
 
 [Added Associations]
 application/wps-office.potx=wps-office-wpp.desktop;
@@ -54,7 +57,10 @@ application/wps-office.wpss=wps-office-wps.desktop;
 application/wps-office.wpso=wps-office-wps.desktop;
 x-scheme-handler/tg=userapp-Telegram Desktop-0MNHW0.desktop;userapp-Telegram Desktop-PYNRW0.desktop;userapp-Telegram Desktop-B8IWW0.desktop;userapp-Telegram Desktop-4R2NX0.desktop;userapp-Telegram Desktop-I9NPX0.desktop;userapp-Telegram Desktop-A9TDX0.desktop;userapp-Telegram Desktop-8FC2X0.desktop;userapp-Telegram Desktop-SFGRY0.desktop;userapp-Telegram Desktop-O56UY0.desktop;userapp-Telegram Desktop-073C00.desktop;userapp-Telegram Desktop-20IIJ1.desktop;
 application/pdf=wps-office-pdf.desktop;
-text/x-log=leafpad.desktop;org.gnome.gedit.desktop;
+text/x-log=google-chrome.desktop;leafpad.desktop;org.gnome.gedit.desktop;
 application/octet-stream=atom.desktop;org.gnome.gedit.desktop;
 text/plain=leafpad.desktop;google-chrome.desktop;Alacritty.desktop;
 application/json=leafpad.desktop;
+application/x-zerosize=google-chrome.desktop;
+application/x-raw-disk-image=leafpad.desktop;
+application/x-trash=leafpad.desktop;

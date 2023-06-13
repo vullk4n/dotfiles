@@ -5,7 +5,7 @@ if [[ $USER = "vulkan" ]]; then
   git config --global user.email "vulkanops@gmail.com"
   git config --global user.name "vulkan-ops"
   git config --global http.postBuffer 524288000
-  mkdir -p $HOME/{Images,Videos} &>/dev/null
+  mkdir -p $HOME/{Images,Docs,Videos} &>/dev/null
   cd $pwd
 fi
 
