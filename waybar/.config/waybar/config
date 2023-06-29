@@ -115,7 +115,7 @@
   },
     "custom/github": {
     "format": "",
-    "on-click": "xdg-open https://github.com/LineageOS/android_device_motorola_sdm632-common/commits/lineage-20",
+    "on-click": "xdg-open https://github.com/LineageOS/android_device_motorola_sm8250-common/commits/lineage-20",
     "tooltip": false
   },
 "custom/whatsapp": {

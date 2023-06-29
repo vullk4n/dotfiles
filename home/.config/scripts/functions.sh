@@ -117,13 +117,11 @@ ssh vulkan@100.117.198.106
 
 job () {
 cd Downloads
-mkdir github
-cd github
-git clone https://github.com/vulkan-ops/device_motorola_ocean    ocean-dt
-git clone https://github.com/vulkan-ops/device_motorola_river    river-dt
-git clone https://github.com/vulkan-ops/device_motorola_sdm632-common common-tree
-git clone https://github.com/vulkan-ops/vendor_motorola_ocean   vendor-ocean
-git clone https://github.com/vulkan-ops/vendor_motorola_river   vendor-river
-git clone https://github.com/vulkan-ops/vendor_motorola_sdm632-common  vendor-common
-git clone https://github.com/vulkan-ops/kernel_motorola_sdm632   kernel
+mkdir sm8250
+cd sm8250
+git clone https://github.com/vulkan-ops/device_motorola_pstar pstar-dt
+git clone https://github.com/vulkan-ops/device_motorola_sm8250-common sm8250_common-tree
+git clone https://github.com/vulkan-ops/vendor_motorola_pstar   vendor-pstar
+git clone https://github.com/vulkan-ops/vendor_motorola_sm8250-common  vendor_sm8250-common
+git clone https://github.com/vulkan-ops/kernel_motorola_sm8250   kernel-sm8250
 }
