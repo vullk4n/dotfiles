@@ -117,11 +117,9 @@ ssh vulkan@100.117.198.106
 
 job () {
 cd Downloads
-mkdir sm8250
-cd sm8250
-git clone https://github.com/vulkan-ops/device_motorola_pstar pstar-dt
-git clone https://github.com/vulkan-ops/device_motorola_sm8250-common sm8250_common-tree
+mkdir pstar_devops
+cd pstar_devops
+git clone https://github.com/vulkan-ops/device_motorola_pstar pstar-tree
 git clone https://github.com/vulkan-ops/vendor_motorola_pstar   vendor-pstar
-git clone https://github.com/vulkan-ops/vendor_motorola_sm8250-common  vendor_sm8250-common
 git clone https://github.com/vulkan-ops/kernel_motorola_sm8250   kernel-sm8250
 }
