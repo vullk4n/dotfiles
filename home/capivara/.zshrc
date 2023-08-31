@@ -1,6 +1,5 @@
-export ZSH="/mnt/hd3/vitor/.oh-my-zsh"
+export ZSH="/home/vulkan/.oh-my-zsh"
 export EDITOR="nano"
-#export OUT_DIR=/mnt/hd3/vitor/derp-out
 
 ZSH_THEME="robbyrussell"
 
@@ -14,17 +13,11 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-play () {
-#git clone https://github.com/LineageOS/android_device_motorola_channel  device/motorola/channel
-git clone https://github.com/LineageOS/android_device_motorola_nash -b lineage-19.1 device/motorola/nash
-#git clone https://github.com/LineageOS/android_device_motorola_sdm632-common  device/motorola/sdm632-common
-#git clone https://gitlab.com/the-muppets/proprietary_vendor_motorola_channel   vendor/motorola/channel
-#git clone https://gitlab.com/the-muppets/proprietary_vendor_motorola_sdm632-common  vendor/motorola/sdm632-common
-git clone https://gitlab.com/the-muppets/proprietary_vendor_motorola_nash vendor/motorola/nash
-#git clone https://github.com/LineageOS/android_kernel_motorola_sdm632   kernel/motorola/sdm632
-git clone https://github.com/LineageOS/android_kernel_motorola_msm8998  -b lineage-19.1 kernel/motorola/msm8998
+ps () {
+git clone https://github.com/vulkan-ops/device_motorola_pstar  device/motorola/pstar
+git clone https://github.com/vulkan-ops/vendor_motorola_pstar   vendor/motorola/pstar
+git clone https://github.com/vulkan-ops/kernel_motorola_sm8250   kernel/motorola/sm8250
 }
-
 
 hw () {
 git clone https://github.com/LineageOS/android_hardware_motorola   	hardware/motorola
@@ -74,4 +67,5 @@ sshgen () {
 }
 
 
-alias hals="cp -af hardware/qcom-caf/common/os_pickup.bp hardware/qcom-caf/msm8996/Android.bp && cp -af hardware/qcom-caf/common/os_pickup.mk hardware/qcom-caf/msm8996/Android.mk"
+#alias hals="cp -af hardware/qcom-caf/common/os_pickup.bp hardware/qcom-caf/msm8996/Android.bp && cp -af hardware/qcom-caf/common/os_pickup.mk hardware/qcom-caf/msm8996/Android.mk"
+

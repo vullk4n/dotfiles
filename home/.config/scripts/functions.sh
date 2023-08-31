@@ -112,7 +112,7 @@ wifi() {
 vm () {
 sudo systemctl enable --now tailscaled
 sudo tailscale up
-ssh vulkan@100.117.198.106
+ssh vulkan@100.90.167.139
 }
 
 job () {
