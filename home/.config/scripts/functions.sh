@@ -120,8 +120,8 @@ cd Downloads
 mkdir pstar_devops
 cd pstar_devops
 git clone ssh://git@github.com/vulkan-ops/device_motorola_pstar pstar-dt
-git clone ssh://git@github.com/vulkan-ops/device_motorola_sm8250-common pstar-common
+git clone ssh://git@github.com/vulkan-ops/device_motorola_sm8250-common sm850-common
 git clone ssh://git@github.com/vulkan-ops/vendor_motorola_pstar   pstar-vendor
-git clone ssh://git@github.com/vulkan-ops/vendor_motorola_sm8250-common vendor-common
+git clone ssh://git@github.com/vulkan-ops/vendor_motorola_sm8250-common vendor-sm8250
 git clone ssh://git@github.com/vulkan-ops/kernel_motorola_sm8250   kernel-sm8250
 }
