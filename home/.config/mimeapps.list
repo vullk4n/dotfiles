@@ -42,6 +42,7 @@ x-scheme-handler/tg=userapp-Telegram Desktop-073C00.desktop
 application/x-zerosize=google-chrome.desktop
 application/x-raw-disk-image=leafpad.desktop
 application/x-trash=leafpad.desktop
+application/vnd.ms-publisher=leafpad.desktop
 
 [Added Associations]
 application/wps-office.potx=wps-office-wpp.desktop;
@@ -64,3 +65,4 @@ application/json=leafpad.desktop;
 application/x-zerosize=google-chrome.desktop;
 application/x-raw-disk-image=leafpad.desktop;
 application/x-trash=leafpad.desktop;
+application/vnd.ms-publisher=leafpad.desktop;
