@@ -3,9 +3,9 @@
 source $HOME/.colors &>/dev/null
 
 aetc() {
-	sudo cp /home/vulkan/.dotfiles/home/capivara/etc/hosts /etc/hosts
-	sudo cp /home/vulkan/.dotfiles/home/capivara/etc/ntp.conf /etc/ntp.conf
-	sudo ntpd-q -g  && sudo hwclock --systohc
+	#sudo cp /home/vulkan/.dotfiles/home/capivara/etc/hosts /etc/hosts
+	#sudo cp /home/vulkan/.dotfiles/home/capivara/etc/ntp.conf /etc/ntp.conf
+	sudo ntpd -q -g  && sudo hwclock --systohc
 }
 
 f() {
