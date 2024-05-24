@@ -78,6 +78,15 @@ job () {
 cd Downloads
 mkdir pstar_devops
 cd pstar_devops
+git clone ssh://git@github.com/vulkan-ops/hardware_motorola  hardware-motorola
+git clone ssh://git@github.com/DerpFest-Devices/device_motorola_pstar derp-pstar
+git clone ssh://git@github.com/DerpFest-Devices/device_motorola_sm8250-common derp-pstar-common
+git clone ssh://git@github.com/DerpFest-Devices/vendor_motorola_pstar derp-pstar-vendor
+git clone ssh://git@github.com/DerpFest-Devices/vendor_motorola_sm8250-common derp-pstar-vendor-common
+git clone ssh://git@github.com/crdroidandroid/android_device_motorola_pstar cr-pstar
+git clone ssh://git@github.com/crdroidandroid/android_device_motorola_sm8250-common cr-pstar-common
+git clone ssh://git@github.com/crdroidandroid/proprietary_vendor_motorola_pstar cr-pstar-vendor
+git clone ssh://git@github.com/crdroidandroid/proprietary_vendor_motorola_sm8250-common cr-pstar-vendor-common
 }
 
 stockp() {
