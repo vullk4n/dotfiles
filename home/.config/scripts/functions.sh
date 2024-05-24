@@ -28,7 +28,7 @@ function translate() {
 if [ $HOST = "vulkan" ]; then
   cm() {
     translate
-    git add . && git commit --message $msg --signoff --author "vulkan-ops <vulkanops@gmail.com>" && git push -f
+    git add . && git commit --message $msg --signoff --author "vullk4n <vulkanops@gmail.com>" && git push -f
   }
   c() {
     git add . && git commit --author "${1}" && git push -f
@@ -39,7 +39,7 @@ if [ $HOST = "vulkan" ]; then
 else
   cm() {
     translate
-    git add . && git commit --message $msg --signoff --author "vulkan-ops <vulkanops@gmail.com>" && git push -f
+    git add . && git commit --message $msg --signoff --author "vullk4n <vulkanops@gmail.com>" && git push -f
   }
   c() {
     git add . && git commit --author "${1}"
@@ -78,7 +78,7 @@ job () {
 cd Downloads
 mkdir pstar_devops
 cd pstar_devops
-git clone ssh://git@github.com/vulkan-ops/hardware_motorola  hardware-motorola
+git clone ssh://git@github.com/vullk4n/hardware_motorola  hw-moto
 git clone ssh://git@github.com/DerpFest-Devices/device_motorola_pstar derp-pstar
 git clone ssh://git@github.com/DerpFest-Devices/device_motorola_sm8250-common derp-pstar-common
 git clone ssh://git@github.com/DerpFest-Devices/vendor_motorola_pstar derp-pstar-vendor

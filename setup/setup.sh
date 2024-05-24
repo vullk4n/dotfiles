@@ -3,7 +3,7 @@
 if [[ $USER = "vulkan" ]]; then
   pwd=$(pwd) && cd $HOME
   git config --global user.email "vulkanops@gmail.com"
-  git config --global user.name "vulkan-ops"
+  git config --global user.name "vullk4n"
   git config --global http.postBuffer 524288000
   mkdir -p $HOME/{Images,Docs,Videos} &>/dev/null
   cd $pwd

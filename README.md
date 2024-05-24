@@ -1,6 +1,6 @@
 # ~/.dotfiles
 
-![screenshot](https://raw.githubusercontent.com/vulkan-ops/dotfiles/master/print.png)
+![screenshot](https://raw.githubusercontent.com/vullk4n/dotfiles/master/print.png)
 
 <!--## Some of the worthy tools that I use, develop or help maintain:
 
@@ -18,7 +18,7 @@
 ## Usage:
 
 ```
-$ git clone https://github.com/vulkan-ops/dotfiles ~/.dotfiles
+$ git clone https://github.com/vullk4n/dotfiles ~/.dotfiles
 $ cd ~/.dotfiles
 $ ./setup/setup.sh
 $ ./install.sh
