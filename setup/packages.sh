@@ -41,8 +41,8 @@ readonly PACKAGES=(
   sbc
   unrar unzip zip
   wget
-  xf86-video-amdgpu
-  xf86-video-ati
+  #xf86-video-amdgpu
+  #xf86-video-ati
   cups hplip system-config-printer
 
   # fonts

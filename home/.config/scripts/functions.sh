@@ -18,7 +18,7 @@ a() {
   git cherry-pick --abort
 }
 
-function translate() {
+translate() {
   typing=$(mktemp)
   rm -rf $typing && nano $typing
   msg=$(trans -b :en -no-auto -i $typing)
@@ -125,26 +125,27 @@ stockp() {
  sudo fastboot -w
 }
 
+gki() {
+ sudo fastboot flash boot boot.img
+ sudo fastboot flash vendor_boot vendor_boot.img
+ sudo fastboot flash dtbo dtbo.img
+}
+
 yplay() {
  mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"
 }
-
 play() {
  mpv "$(wl-paste 2>/dev/null || xclip -o 2>/dev/null)"
 }
-
 down() {
  aria2c "$(wl-paste 2>/dev/null || xclip -o 2>/dev/null)"
 }
-
 pkginf() {
  clear && pacman -Si $@ | awk '/Name/{print "Package: " $3}/Version/{print "Version: " $3}/Installed Size/{printf "Size: %s %s\n", $4, $5}'
 }
-
 pkginf1() {
    clear && pacman -Q $@
 }
-
 usage() {
     for p in "$@" ; do
         if pidof $p >/dev/null ; then

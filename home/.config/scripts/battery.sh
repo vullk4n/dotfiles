@@ -3,7 +3,7 @@
 iconpath="/usr/share/icons/Papirus-Dark/32x32/devices"
 icon="${iconpath}/battery.svg"
 
-bat="/sys/class/power_supply/BAT1"
+bat="/sys/class/power_supply/BAT0"
 
 while sleep 120
 do

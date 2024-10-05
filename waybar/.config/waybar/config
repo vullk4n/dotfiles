@@ -126,7 +126,7 @@
   },
   "custom/gerrit": {
     "format": "",
-    "on-click": "xdg-open https://review.lineageos.org/q/status:merged+branch:lineage-21",
+    "on-click": "xdg-open https://review.lineageos.org/q/status:merged+branch:lineage-22",
     "tooltip": false
   },
   "custom/keep": {
