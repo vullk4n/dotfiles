@@ -116,7 +116,7 @@
   },
     "custom/github": {
     "format": "",
-    "on-click": "xdg-open https://github.com/LineageOS/android_device_motorola_sm8250-common/commits/lineage-22.0",
+    "on-click": "xdg-open https://github.com/LineageOS/android_device_motorola_sm8250-common/commits/lineage-22.1",
     "tooltip": false
   },
 "custom/whatsapp": {
@@ -126,7 +126,7 @@
   },
   "custom/gerrit": {
     "format": "",
-    "on-click": "xdg-open https://review.lineageos.org/q/status:merged+branch:lineage-22.0",
+    "on-click": "xdg-open https://review.lineageos.org/q/status:merged+branch:lineage-22.1",
     "tooltip": false
   },
   "custom/keep": {
