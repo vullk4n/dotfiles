@@ -134,18 +134,15 @@ gki() {
 yplay() {
  mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"
 }
+
 play() {
  mpv "$(wl-paste 2>/dev/null || xclip -o 2>/dev/null)"
 }
+
 down() {
  aria2c "$(wl-paste 2>/dev/null || xclip -o 2>/dev/null)"
 }
-pkginf() {
- clear && pacman -Si $@ | awk '/Name/{print "Package: " $3}/Version/{print "Version: " $3}/Installed Size/{printf "Size: %s %s\n", $4, $5}'
-}
-pkginf1() {
-   clear && pacman -Q $@
-}
+
 usage() {
     for p in "$@" ; do
         if pidof $p >/dev/null ; then
