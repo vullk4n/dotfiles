@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Auto Login
+
 sudo rm -rf /etc/systemd/system/getty@tty1.service.d/override.conf
 sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
 echo "[Service]

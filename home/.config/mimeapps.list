@@ -48,6 +48,9 @@ application/octet-stream=leafpad.desktop
 inode/symlink=leafpad.desktop
 x-scheme-handler/tonsite=org.telegram.desktop.desktop
 application/msword=google-chrome.desktop
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+x-scheme-handler/fleet=jetbrains-fleet.desktop
+x-scheme-handler/discord=vesktop.desktop
 
 [Added Associations]
 application/wps-office.potx=wps-office-wpp.desktop;
@@ -76,3 +79,4 @@ inode/symlink=leafpad.desktop;
 x-scheme-handler/tonsite=org.telegram.desktop.desktop;
 image/png=google-chrome.desktop;
 application/msword=google-chrome.desktop;
+image/jpeg=gimp.desktop;google-chrome.desktop;krita_jpeg.desktop;

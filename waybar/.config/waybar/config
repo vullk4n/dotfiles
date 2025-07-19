@@ -1,9 +1,8 @@
 {
-  "layer": "top", // Waybar at top layer
-  "position": "top", // Waybar position (top|bottom|left|right)
-  "height": 10, // Waybar height (to be removed for auto height)
-  "width": 1366, // Waybar width
-  // Bar
+  "layer": "top",
+  "position": "top",
+  "height": 10,
+  "width": 1366,
   "modules-left": [
     "custom/github",
     "custom/whatsapp",
@@ -12,8 +11,10 @@
     "custom/bluetooth",
     "sway/workspaces",
     "sway/mode"
-],
-  "modules-center": ["sway/window"],
+  ],
+  "modules-center": [
+    "sway/window"
+  ],
   "modules-right": [
     "pulseaudio",
     "backlight",
@@ -23,9 +24,8 @@
     "battery",
     "clock",
     "custom/reboot",
-    "custom/poweroff",
+    "custom/poweroff"
   ],
-  // Modules
   "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
@@ -43,7 +43,7 @@
     "timezone": "America/Fortaleza",
     "format": "{:%H:%M}",
     "format-alt": "{:%d-%m-%Y}",
-    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><big>{calendar}</big></tt>",
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><big>{calendar}</big></tt>"
   },
   "custom/reboot": {
     "format": "",
@@ -71,11 +71,13 @@
   "backlight": {
     "interval": 30,
     "format": "{icon} {percent}%",
-    "format-icons": [""],
+    "format-icons": [
+      ""
+    ],
     "on-scroll-down": "echo $((`cat /sys/class/backlight/intel_backlight/brightness` - 5)) | sudo tee /sys/class/backlight/intel_backlight/brightness",
     "on-scroll-up": "echo $((`cat /sys/class/backlight/intel_backlight/brightness` + 5)) | sudo tee /sys/class/backlight/intel_backlight/brightness"
   },
-    "battery": {
+  "battery": {
     "bat": "BAT0",
     "interval": 30,
     "states": {
@@ -84,11 +86,17 @@
     },
     "format": "<span color=\"#F2F2F2\">{capacity}%</span> {icon}",
     "format-charging": "<span color=\"#F2F2F2\">{capacity}%</span> <span color=\"#50fa7b\"></span>",
-    "format-icons": ["", "", "", "", ""],
-    "format-full": "{capacity}% ",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "format-full": "{capacity}% "
   },
   "network": {
-    "interface": "wlan0", // (Optional) To force the use of this interface
+    "interface": "wlan0",
     "format-wifi": " {essid}",
     "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
     "format-linked": " Disconnected",
@@ -97,7 +105,7 @@
     "interval": 5
   },
   "pulseaudio": {
-    "scroll-step": 1, // %, can be a float
+    "scroll-step": 1,
     "format": "{icon} {volume}",
     "format-bluetooth": "{icon}   {volume}",
     "format-bluetooth-muted": "  {icon} ",
@@ -111,15 +119,19 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""]
-    },
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
   },
-    "custom/github": {
+  "custom/github": {
     "format": "",
     "on-click": "xdg-open https://github.com/LineageOS/android_device_motorola_sm8250-common/commits/lineage-22.2",
     "tooltip": false
   },
-"custom/whatsapp": {
+  "custom/whatsapp": {
     "format": "",
     "on-click": "xdg-open https://meet.google.com/landing?hs=197&authuser=0",
     "tooltip": false

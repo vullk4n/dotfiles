@@ -9,18 +9,18 @@ if [[ $USER = "vulkan" ]]; then
   cd $pwd
 fi
 
-# Install YAY AUR Manager
+
 pwd=$(pwd)
 rm -rf $HOME/yay && git clone https://aur.archlinux.org/yay.git $HOME/yay && cd $HOME/yay && makepkg -si --noconfirm && rm -rf $HOME/yay
 cd $pwd
 
-# Load packages
+
 source $HOME/.dotfiles/setup/packages.sh
 
-# GPG Key Spotify
+
 curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | gpg --import -
 
-# Install packages
+
 for i in "${PACKAGES[@]}"; do
   sudo pacman -Sy ${i} --needed --noconfirm
 done
