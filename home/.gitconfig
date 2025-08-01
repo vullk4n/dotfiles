@@ -5,3 +5,5 @@
 	ui = auto
 [credential]
 	helper = store
+[core]
+	hooksPath = /home/vulkan/.git/hooks
