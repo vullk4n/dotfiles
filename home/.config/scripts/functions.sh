@@ -78,78 +78,21 @@ job () {
 cd Downloads
 mkdir pstar_devops
 cd pstar_devops
-git clone ssh://git@github.com/vullk4n/hardware_motorola  hw-moto
-git clone ssh://git@github.com/DerpFest-Devices/device_motorola_pstar derp-pstar
-git clone ssh://git@github.com/DerpFest-Devices/device_motorola_nio derp-nio
-git clone ssh://git@github.com/DerpFest-Devices/device_motorola_sm8250-common derp-pstar-common
-git clone ssh://git@github.com/DerpFest-Devices/vendor_motorola_pstar derp-pstar-vendor
-git clone ssh://git@github.com/DerpFest-Devices/vendor_motorola_nio derp-nio-vendor
-git clone ssh://git@github.com/DerpFest-Devices/vendor_motorola_sm8250-common derp-pstar-vendor-common
+git clone https://github.com/vullk4n/hardware_motorola  hw-moto
+git clone https://github.com/DerpFest-Devices/device_motorola_pstar derp-pstar
+git clone https://github.com/DerpFest-Devices/device_motorola_nio derp-nio
+git clone https://github.com/DerpFest-Devices/device_motorola_sm8250-common derp-pstar-common
+git clone https://github.com/DerpFest-Devices/vendor_motorola_pstar derp-pstar-vendor
+git clone https://github.com/DerpFest-Devices/vendor_motorola_nio derp-nio-vendor
+git clone https://github.com/DerpFest-Devices/vendor_motorola_sm8250-common derp-pstar-vendor-common
 }
 
-stockp() {
- sudo fastboot oem fb_mode_set
- sudo fastboot flash partition gpt.bin
- sudo fastboot flash bootloader bootloader.img
- sudo fastboot flash vbmeta vbmeta.img
- sudo fastboot flash vbmeta_system vbmeta_system.img
- sudo fastboot flash modem NON-HLOS.bin
- sudo fastboot erase mdmddr
- sudo fastboot flash fsg fsg.mbn
- sudo fastboot erase mdm1m9kefs1
- sudo fastboot erase mdm1m9kefs2
- sudo fastboot flash bluetooth BTFM.bin
- sudo fastboot flash dsp dspso.bin
- sudo fastboot flash logo logo.bin
- sudo fastboot flash boot boot.img
- sudo fastboot flash vendor_boot vendor_boot.img
- sudo fastboot flash dtbo dtbo.img
- sudo fastboot flash super super.img_sparsechunk.0
- sudo fastboot flash super super.img_sparsechunk.1
- sudo fastboot flash super super.img_sparsechunk.2
- sudo fastboot flash super super.img_sparsechunk.3
- sudo fastboot flash super super.img_sparsechunk.4
- sudo fastboot flash super super.img_sparsechunk.5
- sudo fastboot flash super super.img_sparsechunk.6
- sudo fastboot flash super super.img_sparsechunk.7
- sudo fastboot flash super super.img_sparsechunk.8
- sudo fastboot flash super super.img_sparsechunk.9
- sudo fastboot flash super super.img_sparsechunk.10
- sudo fastboot flash super super.img_sparsechunk.11
- sudo fastboot flash super super.img_sparsechunk.12
- sudo fastboot erase carrier
- sudo fastboot erase ddr
- sudo fastboot oem fb_mode_clear
- sudo fastboot -w
+stock() {
+  $HOME/.config/scripts/stock.sh
 }
 
 gki() {
  sudo fastboot flash boot boot.img
  sudo fastboot flash vendor_boot vendor_boot.img
  sudo fastboot flash dtbo dtbo.img
-}
-
-yplay() {
- mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"
-}
-
-play() {
- mpv "$(wl-paste 2>/dev/null || xclip -o 2>/dev/null)"
-}
-
-down() {
- aria2c "$(wl-paste 2>/dev/null || xclip -o 2>/dev/null)"
-}
-
-usage() {
-    for p in "$@" ; do
-        if pidof $p >/dev/null ; then
-            RAM=$(echo $(ps -A --sort -rsz -o comm,rss | grep $p | sed -n 1p | sed 's/.* //g') / 1000 | bc)
-            PRAM=$(ps -A --sort -rsz -o comm,pmem | grep $p | sed -n 1p | sed 's/.* //g')
-            PCPU=$(ps -A --sort -rsz -o comm,pcpu | grep $p | sed -n 1p | sed 's/.* //g')
-            echo "$p está usando ${RAM}mb de RAM (${PRAM}%) e ${PCPU}% de CPU"
-        else
-            echo "$p não está rodando."
-        fi
-    done
 }
