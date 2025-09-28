@@ -1,47 +1,53 @@
 #!/usr/bin/env bash
 
-readonly PACKAGES=(
+# Dependencies for dotfiles
+dependencies=(
+  alsa-firmware alsa-utils alsa-plugins pulseaudio pulseaudio-bluetooth pavucontrol sox
+  bluez bluez-libs bluez-tools bluez-utils
 
-  alsa alsa-firmware alsa-utils alsa-plugins
-  pulseaudio pulseaudio-bluetooth pavucontrol
-  sox
-  archlinux-keyring alacritty bat tailscale 
-  filezilla git gpicview htop
-  lxappearance dhcpcd leafpad mako
-  nano nano-syntax-highlighting
-  reflector brightnessctl
-  stow sway swaybg
-  telegram-desktop tree thunar thunar-archive-plugin 
-  thunar-media-tags-plugin thunar-volman 
-  transmission-gtk
-  waybar wayland wofi qbittorent
-  xorg-server-xwayland
-  zsh-autosuggestions bluez bluez-libs bluez-tools bluez-utils
-  android-tools gvfs gvfs-afc gvfs-gphoto2 gvfs-mtp gvfs-smb
-  gvfs-nfs  gvfs-goa  gvfs-google ntfs-3g grim
-  imagemagick slurp
-  wl-clipboard mesa mpd mpv
-  openssh
-  python-setuptools
-  sbc
-  unrar unzip zip
-  wget cups hplip system-config-printer
-  noto-fonts-emoji
-  terminus-font ttf-liberation
-)
-
-readonly AUR=(
-
-  ant-dracula-gtk-theme
-  capitaine-cursors 
-  cursor-bin
-  papirus-icon-theme-git google-chrome
+  i3-gaps i3lock feh rofi dunst picom alacritty stow nano nano-syntax-highlighting neofetch vlc gpicview zsh zsh-syntax-highlighting
   oh-my-zsh-git
-  swaylock-effects-git
-  translate-shell-git
-  zsh-syntax-highlighting
-  spotify ntp python-ruamel-yaml
-  selinux-python
-  ttf-font-awesome ttf-dejavu
-  wf-recorder-git
+  maim ffmpeg imagemagick slop
+  polybar-git
+
+  thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman
+
+  flatery-icon-theme-git xcursor-breeze dracula-gtk-theme-git
+
+  google-chrome telegram-desktop
+
+  terminus-font noto-fonts-emoji ttf-dejavu ttf-liberation ttf-icomoon-feather ttf-font-awesome
+
+  xorg-server xorg-xrandr xorg-xbacklight xorg-xinit xorg-xprop xorg-server-devel xorg-xsetroot xclip xsel xautolock xorg-xdpyinfo xorg-xinput xgetres
+  xidlehook
 )
+
+mypackages=(
+  archlinux-keyring gnupg cronie net-tools
+  translate-shell-git
+
+  lm_sensors zenpower-dkms
+
+  steam mesa mesa-demos lib32-mesa lib32-libvdpau
+  dmidecode nbfc-git i8kutils
+  wine winetricks lib32-gnutls wps-office ttf-wps-fonts
+
+  pulsar-bin
+  the_silver_searcher discord diff-so-fancy filezilla git gotop jdk-openjdk jq man man-pages-pt_br
+  github-cli
+  vkd3d lib32-vkd3d
+  rsync shfmt tree qbittorrent zip scrcpy
+
+  optipng bfg
+
+  makepkg-optimize
+  python python-pip python-pipenv-to-requirements python-pipx python-pip-api python-pipreqs python-pipenv python-pip-shims
+
+  android-tools hfsprogs gvfs gvfs-mtp btrfs-progs dosfstools f2fs-tools e2fsprogs jfsutils nilfs-utils ntfs-3g reiserfsprogs udftools xfsprogs
+
+  qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat libguestfs
+
+  openssh python-setuptools unrar unzip wget
+  woeusb-ng
+)
+

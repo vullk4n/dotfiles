@@ -1,9 +1,4 @@
-#!/bin/zsh
-
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-    pidof sway > /dev/null || exec sway
+if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]]; then
+  export QT_STYLE_OVERRIDE="gtk2"
+  startx
 fi
-
-export WLR_NO_HARDWARE_CURSORS=1
-
-rm -rf $HOME/Desktop

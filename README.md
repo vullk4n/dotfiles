@@ -22,4 +22,5 @@ $ git clone https://github.com/vullk4n/dotfiles ~/.dotfiles
 $ cd ~/.dotfiles
 $ ./setup/setup.sh
 $ ./install.sh
+$ startx
 ```

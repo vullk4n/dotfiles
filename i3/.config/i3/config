@@ -1,0 +1,202 @@
+# i3 config file (v4)
+#
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+set $term alacritty
+
+# Use super/alt/control key
+set $super Mod4
+set $alt Mod1
+set $control Control
+set $shift Shift
+
+# GTK theme
+set $theme Dracula
+set $icon Flatery-Dark
+set $cursor Breeze
+set $font Cantarell
+set $mono Terminus
+set $size_font 9
+
+# Font
+font pango:$font $size_font
+
+# Define names for workspaces
+set $ws1 ""
+set $ws2 ""
+set $ws3 ""
+set $ws4 ""
+set $ws5 ""
+set $ws6 ""
+set $ws7 ""
+set $ws8 ""
+set $ws9 ""
+
+# Use $super+Mouse to drag floating windows to their wanted position
+floating_modifier $super
+
+# Close window
+bindsym $super+w kill
+
+# Move windows
+bindsym $control+$shift+Left move left
+bindsym $control+$shift+Down move down
+bindsym $control+$shift+Up move up
+bindsym $control+$shift+Right move right
+
+# Enter fullscreen mode with window focused
+bindsym $alt+f fullscreen toggle
+bindsym $super+f fullscreen toggle
+
+# Floating window
+bindsym $control+$shift+space floating toggle
+
+# Workspaces
+bindsym $super+1 workspace $ws1
+bindsym $super+2 workspace $ws2
+bindsym $super+3 workspace $ws3
+bindsym $super+4 workspace $ws4
+bindsym $super+5 workspace $ws5
+bindsym $super+6 workspace $ws6
+bindsym $super+7 workspace $ws7
+bindsym $super+8 workspace $ws8
+bindsym $super+9 workspace $ws9
+
+# Move to workspace
+bindsym $control+$shift+1 move container to workspace $ws1; workspace $ws1
+bindsym $control+$shift+2 move container to workspace $ws2; workspace $ws2
+bindsym $control+$shift+3 move container to workspace $ws3; workspace $ws3
+bindsym $control+$shift+4 move container to workspace $ws4; workspace $ws4
+bindsym $control+$shift+5 move container to workspace $ws5; workspace $ws5
+bindsym $control+$shift+6 move container to workspace $ws6; workspace $ws6
+bindsym $control+$shift+7 move container to workspace $ws7; workspace $ws7
+bindsym $control+$shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $control+$shift+9 move container to workspace $ws9; workspace $ws9
+
+# Next workspaces
+bindsym $super+Tab workspace next
+bindsym $alt+Tab workspace next
+
+# i3-gaps
+gaps inner 22
+gaps outer 0
+default_border pixel 0
+default_floating_border none
+focus_on_window_activation focus
+
+# Rezise
+mode "resize" {
+        bindsym Left resize shrink width 20 px or 20 ppt
+        bindsym Down resize grow height 20 px or 20 ppt
+        bindsym Up resize shrink height 20 px or 20 ppt
+        bindsym Right resize grow width 20 px or 20 ppt
+
+        bindsym $control+$shift+r mode "default"
+}
+bindsym $control+$shift+r mode "resize"
+
+# Startup
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/scripts/battery.sh
+exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/blak.png
+exec_always --no-startup-id picom --config $HOME/.config/picom/picom.conf
+exec_always --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
+exec_always --no-startup-id xidlehook --not-when-audio --not-when-fullscreen --timer 600 '$HOME/.config/scripts/i3lock.sh'
+exec_always --no-startup-id sudo timedatectl set-ntp true && sudo hwclock --systohc
+exec_always --no-startup-id kotatogram-desktop &
+exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false; pactl set-sink-volume @DEFAULT_SINK@ 80%"
+exec --no-startup-id echo 206 | sudo tee /sys/class/backlight/intel_backlight/brightness
+
+# GTK theme set
+exec --no-startup-id gsettings set org.gnome.desktop.interface gtk-theme $theme
+exec --no-startup-id gsettings set org.gnome.desktop.interface icon-theme $icon
+exec --no-startup-id gsettings set org.gnome.desktop.interface cursor-theme $cursor
+exec --no-startup-id xsetroot -cursor_name $cursor
+exec --no-startup-id gsettings set org.gnome.desktop.interface cursor-size 18
+exec --no-startup-id gsettings set org.gnome.desktop.interface icon-theme $icon
+exec --no-startup-id gsettings set org.gnome.desktop.interface font-name $font
+exec --no-startup-id gsettings set org.gnome.desktop.interface monospace-font-name $mono
+
+# Shortcuts
+# Audio/Brightness Control
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false; pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false; pactl set-sink-volume @DEFAULT_SINK@ -5%"
+bindsym $super+Up exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false; pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bindsym $super+Down exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false; pactl set-sink-volume @DEFAULT_SINK@ -5%"
+bindsym XF86AudioMute exec --no-startup-id "pactl set-sink-mute 0 toggle"
+
+bindsym XF86MonBrightnessUp exec --no-startup-id echo $((`cat /sys/class/backlight/intel_backlight/brightness` + 25)) | sudo tee /sys/class/backlight/intel_backlight/brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id echo $((`cat /sys/class/backlight/intel_backlight/brightness` - 25)) | sudo tee /sys/class/backlight/intel_backlight/brightness
+bindsym $alt+Right exec --no-startup-id echo $((`cat /sys/class/backlight/intel_backlight/brightness` + 25)) | sudo tee /sys/class/backlight/intel_backlight/brightness
+bindsym $alt+Left exec --no-startup-id echo $((`cat /sys/class/backlight/intel_backlight/brightness` - 25)) | sudo tee /sys/class/backlight/intel_backlight/brightness
+
+bindsym $control+$alt+Delete exec --no-startup-id pkill -15 Xorg
+
+# Screenshot
+bindsym Print exec --no-startup-id $HOME/.config/scripts/screenshot.sh window
+bindsym $control+Print exec --no-startup-id $HOME/.config/scripts/screenshot.sh
+
+# Application shortcuts
+bindsym $super+Return exec --no-startup-id alacritty &; workspace $ws1
+bindsym $super+e exec --no-startup-id thunar &; workspace $ws7
+bindsym $super+F2 exec --no-startup-id google-chrome-stable &; workspace $ws2
+bindsym $super+F3 exec --no-startup-id telegram-desktop &; workspace $ws4
+bindsym $super+F4 exec --no-startup-id pulsar; workspace $ws3
+
+# System shortcuts
+bindsym $super+d exec --no-startup-id $HOME/.config/rofi/launcher/launcher.sh
+
+bindsym $super+BackSpace exec --no-startup-id alacritty -t testingscript -e $HOME/.config/scripts/scripter.sh &
+bindsym F10 exec --no-startup-id $HOME/.config/rofi/mymenu/mymenu.sh &
+bindsym F11 exec --no-startup-id $HOME/.dotfiles/install.sh
+
+# Get rules
+# xprop |awk '/^WM_CLASS/{sub(/.* =/, "instance:"); sub(/,/, "\nclass:"); print} /^WM_NAME/{sub(/.* =/, "title:"); print}'
+for_window [class=".*"] border pixel 0, focus
+for_window [title=".*"] border pixel 0, focus
+
+# Titles, windows, classs
+for_window [class="pop-up|bubble|task_dialog|Preferences"] floating enable, move position center, focus
+for_window [title="Open Folder*|Escolha*|Salvar*|Abrir arquivo"] floating enable, move position center, resize set 700 px 480 px, move right -300px, , move down 0px, focus
+for_window [title="Media viewer|Progresso|Friends*|Novidades*|Pastas de biblioteca*"] floating enable, move position center, focus
+for_window [title="Lista de amigos"] floating enable, move position center, focus
+for_window [title="mywindowfloat"] move to workspace $ws3, floating enable, resize set 850 px 400 px, move right -300px, move down 0px, focus
+for_window [title="testingscript"] move to workspace $ws3, floating enable, resize set 800 px 500 px, move right -190px, move down 170px, focus
+
+# Workspace 1 [terminal]
+for_window [class="Alacritty"] focus
+for_window [class="Qemu-system-x86_64"] move to workspace $ws1, floating enable, focus
+
+# Workspace 2 [browser]
+for_window [class="Google-chrome"] move to workspace $ws2, focus
+for_window [title="Sign In - Google Accounts - Google Chrome|Checker Plus for Gmail|Checker Plus for Google Drive - Popup page"] move to workspace $ws2, floating enable, focus
+for_window [title="Fazer login nas Contas do Google - Google Chrome"] move to workspace $ws2, floating enable, focus
+
+# Workspace 3 [pulsar]
+for_window [class="Pulsar"] move to workspace $ws3, focus
+
+# Workspace 4 [telegram]
+for_window [class="TelegramDesktop"] move to workspace $ws4, focus
+
+# Workspace 5 [media]
+for_window [class="Spotify"] move to workspace $ws5, focus
+
+# Workspace 6 [office]
+for_window [class="Wpspdf|Wpp|Wps|Et"] move to workspace $ws6, focus
+for_window [class="zoom"] move to workspace $ws6, focus
+for_window [title="Zoom Meeting|Participants*"] move to workspace $ws6, floating enable, focus
+
+# Workspace 7 [pc]
+for_window [class="Thunar|thunar"] move to workspace $ws7, floating enable, resize set 800 px 550 px, move right -190px, focus
+for_window [title="Progresso da operação de arquivo*"] floating enable, focus
+for_window [class="qBittorrent"] move to workspace $ws7, focus
+for_window [class="Filezilla"] move to workspace $ws7, focus
+
+# Workspace 8 [tools: {art, build, etc}]
+for_window [class="imv|krita"] move to workspace $ws8, focus
+for_window [class="discord"] move to workspace $ws8, focus
+
+# Workspace 9 [games]
+for_window [class="Steam|steam_proton*|steam_app*|Zenity|Lutris"] move to workspace $ws9, focus
+for_window [title="Steam*|Rockstar Games Launcher"] move to workspace $ws9, focus
+for_window [title="Steam Library Folders|Código de produto*|Create or select new Steam library folder:*|Criar/Selecionar nova pasta de biblioteca Steam:*|Pastas de biblioteca Steam*"] move to workspace $ws9, floating enable, focus
