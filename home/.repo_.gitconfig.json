@@ -9,6 +9,57 @@
     "auto"
   ],
   "credential.helper": [
-    "cache --timeout=3600"
+    "cache --timeout=99999999"
+  ],
+  "filter.lfs.required": [
+    "true"
+  ],
+  "filter.lfs.clean": [
+    "git-lfs clean -- %f"
+  ],
+  "filter.lfs.smudge": [
+    "git-lfs smudge -- %f"
+  ],
+  "filter.lfs.process": [
+    "git-lfs filter-process"
+  ],
+  "core.hookspath": [
+    "/home/vulkan/.git/hooks"
+  ],
+  "alias.cp": [
+    "cherry-pick"
+  ],
+  "alias.c": [
+    "commit"
+  ],
+  "alias.f": [
+    "fetch"
+  ],
+  "alias.m": [
+    "merge"
+  ],
+  "alias.rb": [
+    "rebase"
+  ],
+  "alias.rs": [
+    "reset"
+  ],
+  "alias.ck": [
+    "checkout"
+  ],
+  "alias.rsh": [
+    "reset --hard"
+  ],
+  "alias.logp": [
+    "log --pretty=oneline --abbrev-commit"
+  ],
+  "alias.mlog": [
+    "merge --log=100"
+  ],
+  "url.git@github.com:.insteadof": [
+    "https://github.com/"
+  ],
+  "push.autosetupremote": [
+    "true"
   ]
 }

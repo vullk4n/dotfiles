@@ -4,6 +4,26 @@
 [color]
 	ui = auto
 [credential]
-	helper = store
+	helper = cache --timeout=99999999
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 [core]
 	hooksPath = /home/vulkan/.git/hooks
+[alias]
+	cp = cherry-pick
+	c = commit
+	f = fetch
+	m = merge
+	rb = rebase
+	rs = reset
+	ck = checkout
+	rsh = reset --hard
+	logp = log --pretty=oneline --abbrev-commit
+	mlog = merge --log=100
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[push]
+	autoSetupRemote = true
